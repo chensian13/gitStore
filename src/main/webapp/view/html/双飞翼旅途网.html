@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>双飞翼布局</title>
+		<script type="text/javascript" src="../js/properties.js" ></script>
+		<script type="text/javascript" src="../js/csa.js" ></script>
+		<link rel="stylesheet" href="../css/csa.css" />
+		<style>
+			.special{padding: 10px;}
+			.special img{width: 100px; height: 75px; float: left;}
+			.foot{padding: 10px 20px 10px 20px; margin-top: 40px;}
+		</style>
+		<script>
+			window.onload=function(){
+				defaultFuction();
+				//轮播图注册
+				carouselPicture('csa-carousel',
+				['../img/img1.jpg','../img/img2.jpg','../img/img3.jpg','../img/img4.jpg','../img/img5.jpg']
+				,['标题1','标题2','标题3','标题4','标题5']);
+			}
+		</script>
+	</head>
+	<body>
+		<ul class="csa-ul-nav">
+			<li>飞翼旅商</li>
+			<li>旅游百货</li>
+			<li>会员俱乐部</li>
+			<li>登录 | 注册</li>
+			<div style="clear: both;"></div>
+		</ul><!--nav_end-->
+		
+		<div class="csa-grid-row csa-bg-purple" style="padding: 30px 0px 10px 0px;">
+			<div class="csa-inline-block csa-pos-mid">
+				<div class="csa-grid2"><h2>双飞翼旅途</h2></div>
+				<div class="csa-grid6">
+					<form class="csa-form">
+						<select>
+							<option>所有产品</option>
+							<option>跟团游</option>
+							<option>自由行</option>
+						</select>
+						<input type="search" placeholder="请输入关键词" /><button>搜一波</button>
+					</form>
+				</div>
+				<div class="csa-grid2"></div>
+			</div>
+			<div style="clear: both;"></div>
+		</div><!--nav_end-->
+		
+		
+		<div class="csa-dw-main">
+			<div class="csa-dw-main-inner">
+				<div class="csa-carousel"></div>
+			</div><!--inner_end-->
+		</div><!--main_end-->
+		<div class="csa-dw-left">
+			<ul class="csa-simple-menu">
+				<li><h4 class="csa-effect-underline">宜昌合</h4><a>宜昌风景 晚霞客</a></li>
+				<li><h4 class="csa-effect-underline">望庐山瀑布</h4><a>宜昌风景 晚霞客</a></li>
+				<li><h4 class="csa-effect-underline">千山鸟飞绝</h4><a>宜昌风景 晚霞客</a></li>
+				<li><h4 class="csa-effect-underline">黄山一日游</h4><a>宜昌风景 晚霞客</a></li>
+				<li><h4 class="csa-effect-underline">宜昌合</h4><a>宜昌风景 晚霞客</a></li>
+				<li><h4 class="csa-effect-underline">望庐山瀑布</h4><a>宜昌风景 晚霞客</a></li>
+				<li><h4 class="csa-effect-underline">千山鸟飞绝</h4><a>宜昌风景 晚霞客</a></li>
+				<li><h4 class="csa-effect-underline">黄山一日游</h4><a>宜昌风景 晚霞客</a></li>
+			</ul>
+		</div><!--left_end-->
+		<div class="csa-dw-right">
+			<h3>特色风景区</h3>
+			<div class="special">
+				<img src="../img/img1.jpg" />
+				<pre>听说双飞翼布局是玉伯大大提出来的，始于淘宝UED如果把三栏布局比作一只大鸟，可以把main看成是鸟的身体，sub和extra则是鸟的翅膀。这个布局的实现思路是，先把最重要的身体部分放好，然后再将翅膀移动到适当的地方.</pre>
+			</div>
+			<div class="special">
+				<img src="../img/img2.jpg" />
+				<pre>听说双飞翼布局是玉伯大大提出来的，始于淘宝UED如果把三栏布局比作一只大鸟，可以把main看成是鸟的身体，sub和extra则是鸟的翅膀。这个布局的实现思路是，先把最重要的身体部分放好，然后再将翅膀移动到适当的地方.</pre>
+			</div>
+		</div><!--right_end-->
+		<div style="clear: both;"></div>
+		
+		<div class="foot csa-bg-purple">
+			<a style="color: white;">底部栏,设置版权信息</a>
+		</div><!--foot_end-->
+	</body>
+</html>

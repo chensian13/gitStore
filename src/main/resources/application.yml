@@ -4,13 +4,10 @@ server:
     uri-encoding: UTF-8
 
 spring:
-  thymeleaf:
-    prefix: /templates/view/
-    suffix: ,html
-    mode: HTML5
-    encoding: UTF-8
-    servlet:
-      content-type: text/html
+  mvc:
+    view:
+      prefix: /view/html/
+      suffix: .html
   datasource:
     url: jdbc:mysql://localhost:3307/csaplat?useUnicode=true&characterEncoding=utf8
     username: root

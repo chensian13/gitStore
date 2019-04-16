@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>F式商品详情布局</title>
+		<script type="text/javascript" src="view/js/properties.js" ></script>
+		<script type="text/javascript" src="view/js/csa.js" ></script>
+		<link rel="stylesheet" href="view/css/csa.css" />
+		<style>
+			.nav{padding: 10px 0px 10px 0px;background: orangered; color: white;}
+			.main{}
+			.main h3,h4{padding: 10px 0px 10px 0px;}
+			.csa-simple-menu{list-style: none;}
+			.csa-simple-menu img{width: 60%;max-height: 160px;}
+		</style>
+		<script>
+			window.onload=function(){
+				defaultFuction();
+				//轮播图注册
+				carouselPicture('csa-carousel',
+				['view/img/img1.jpg','view/img/img2.jpg','view/img/img3.jpg','view/img/img4.jpg','view/img/img5.jpg']);
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div>
+			<ul class="csa-ul-nav-default" style="display: inline-block;float: left;">
+				<li>
+					<div class="csa-drop csa-bg-wheat">
+						<span>中国大陆 *</span>
+						<div class="csa-drop-div csa-bg-wheat">
+							<ul class="csa-simple-menu-default">
+								<li><a>中国大陆</a></li>
+								<li><a>香港</a></li>
+								<li><a>台湾</a></li>
+								<li><a>澳门</a></li>
+							</ul>
+						</div>
+					</div><!--drop_end-->
+				</li>
+				<li><a>亲,请登录</a></li>
+				<li><a>免费注册</a></li>
+				<li><a>手机逛淘宝</a></li>
+				<li style="float: right;"><a>商城首页</a></li>
+				<li style="float: right;"><a>我的收藏</a></li>
+				<li style="float: right;"><a>购物车</a></li>
+				<li style="float: right;"><a>商品分类</a></li>
+				<li style="float: right;"><a>卖家中心</a></li>
+				<li style="float: right;"><a>联系客服</a></li>
+			</ul>
+			<div class="csa-clear"></div>
+		</div><!--nav_end-->
+		
+		<div class="csa-grid-row nav">
+			<div class="csa-grid3">
+				<h1 class="csa-float-right"><span>欢迎来到 </span>啃爹商城</h1>
+			</div>
+			<div class="csa-grid6">
+				<form class="csa-form csa-float-right" >
+					<input type="search" placeholder="请输入关键词" /><button>搜一波</button>
+				</form>
+			</div>
+			<div class="csa-clear"></div>
+		</div><!--nav_end-->
+		
+		<div class="csa-inline-block csa-pos-mid main">
+			<div class="csa-grid4">
+				<div class="csa-carousel"></div>
+			</div>
+			<div class="csa-grid4">
+				<form class="csa-form">
+					<h3>【战甲】EARMOR M31 MOD1 电子拾音降噪耳机 头戴式耳机 射击耳罩</h3>
+					<h4 style="color: orangered;">价格¥ <span>381</span></h4>
+					<h4>套餐类型: <span>官方标配</span></h4>
+					<div class="csa-form-item">
+						<span class="csa-label">选择数量:</span><input type="number" min="1" value="1" />
+					</div>
+					<div class="csa-form-item">
+						<span class="csa-label">选择分类:</span>
+						<span>绿色</span><input type="checkbox" name="type" />
+						<span>黑色</span><input type="checkbox" name="type" />
+						<span>红色</span><input type="checkbox" name="type" />
+						<span>蓝色</span><input type="checkbox" name="type" />
+					</div>
+					<div class="csa-form-item">
+						<button class="csa-btn-change" style="background: wheat;color: black;">立即购买</button>
+						<button class="csa-btn-change">加入购物车</button>
+					</div>
+				</form>
+			</div>
+			<div class="csa-grid3">
+				<div class="csa-border-light">
+					<h4 style="color: gray;">看来又看</h4>
+					<ul class="csa-simple-menu">
+						<li><a><img src="view/img/img2.jpg" /></a></li>
+						<li><a><img src="view/img/img3.jpg" /></a></li>
+						<li><a><img src="view/img/img4.jpg" /></a></li>
+					</ul>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div><!--main_end-->
+	</body>
+</html>
