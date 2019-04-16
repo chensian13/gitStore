@@ -25,5 +25,11 @@ public class Front {
         return "layStu/form";
     }
 
+    @RequestMapping("/layTab")
+    public String layTab(){
+        System.out.println("layui tab选项卡");
+        return "layStu/tab";
+    }
+
 
 }

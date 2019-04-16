@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>layui tab选项卡</title>
+		<script type="text/javascript" src="view/layui/layui.js"></script>
+		<script type="text/javascript" src="view/js/csa.js"></script>
+		<script type="text/javascript" src="view/js/properties.js"></script>
+		<link rel="stylesheet" href="view/css/csa.css" />
+		<link rel="stylesheet" href="view/layui/css/layui.css" />
+		<style>
+			.main{width: 64%; text-align: center}
+			.iframe{width: 100%; height:900px; border-style: none;}
+		</style>
+	</head>
+	<body>
+		<div class="layui-tab" lay-allowClose="true">
+			<ul class="layui-tab-title">
+				<li class="layui-this">网站设置</li>
+				<li>用户基本管理</li>
+				<li>权限分配</li>
+				<li>全部历史商品管理文字长一点试试</li>
+				<li>订单管理</li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<iframe name="ftab" scrolling="no" class="iframe" src="/layForm"></iframe>
+				</div>
+				<div class="layui-tab-item">
+					<button id="releadFlay">重新加载框架</button>
+					<iframe name="fflay" scrolling="no" class="iframe" src="/flay"></iframe>
+				</div>
+				<div class="layui-tab-item">3</div>
+				<div class="layui-tab-item">4</div>
+				<div class="layui-tab-item">5</div>
+			</div>
+		</div><!--main_end-->
+	</body>
+	<script>
+		//配置一波,加载自定义的模块
+		//在使用模块之前，全局化配置一些参数，尽管大部分时候它不是必须的
+		layui.config({
+			base:'/view/js/modules/'
+		});
+		//使用加载到页面的模块
+		layui.use(['element','flay'],function(){
+		    var element=layui.element;
+		    var flay=layui.flay;
+
+		    var obj={
+		        reloadIframe:function(){
+		            var f=document.getElementById('releadFlay');
+		            f.onclick=function(){
+                        console.log(window.frames[1].name);
+                        window.frames[1].location.reload(false);
+					}
+				},
+			};//obj end
+
+			obj.reloadIframe();
+        });
+
+	</script>
+</html>
