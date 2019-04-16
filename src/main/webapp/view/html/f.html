@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>F式商品详情布局</title>
-		<script type="text/javascript" src="view/js/properties.js" ></script>
-		<script type="text/javascript" src="view/js/csa.js" ></script>
+		<script type="text/javascript" src="view/layui/layui.js"></script>
+		<script type="text/javascript" src="view/js/csa.js"></script>
+		<script type="text/javascript" src="view/js/properties.js"></script>
 		<link rel="stylesheet" href="view/css/csa.css" />
 		<style>
 			.nav{padding: 10px 0px 10px 0px;background: orangered; color: white;}
@@ -13,14 +14,6 @@
 			.csa-simple-menu{list-style: none;}
 			.csa-simple-menu img{width: 60%;max-height: 160px;}
 		</style>
-		<script>
-			window.onload=function(){
-				defaultFuction();
-				//轮播图注册
-				carouselPicture('csa-carousel',
-				['view/img/img1.jpg','view/img/img2.jpg','view/img/img3.jpg','view/img/img4.jpg','view/img/img5.jpg']);
-			}
-		</script>
 	</head>
 	<body>
 		
@@ -102,4 +95,17 @@
 			<div style="clear: both;"></div>
 		</div><!--main_end-->
 	</body>
+	<script>
+		//配置一波,加载自定义的模块
+		//在使用模块之前，全局化配置一些参数，尽管大部分时候它不是必须的
+		layui.config({
+			base:'/view/js/modules/'
+		});
+		//使用加载到页面的模块
+		layui.use(['flay'],function(){
+		    var flay=layui.flay;
+		    flay.loadWay();  //加载执行
+		});
+
+	</script>
 </html>

@@ -1,6 +1,6 @@
-window.onload=function(){
+/*window.onload=function(){
 	defaultFuction();
-}
+}*/
 /*需要在入口函数执行的函数*/
 function defaultFuction(){
 	showGridDiv();
