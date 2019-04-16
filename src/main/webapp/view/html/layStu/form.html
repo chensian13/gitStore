@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>layui form表单</title>
+		<script type="text/javascript" src="view/layui/layui.js"></script>
+		<script type="text/javascript" src="view/js/csa.js"></script>
+		<script type="text/javascript" src="view/js/properties.js"></script>
+		<link rel="stylesheet" href="view/layui/css/layui.css" />
+		<style>
+			.main{width: 64%; text-align: center}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<form class="layui-form" layui-filter="movie">
+				<div class="layui-form-item">
+					<label class="layui-form-label">用户名:</label>
+					<div class="layui-input-inline">
+						<input type="text" class="layui-input" />
+					</div>
+					<label class="layui-form-label">密码:</label>
+					<div class="layui-input-inline">
+						<input type="text" class="layui-input" />
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label">用户名:</label>
+					<div class="layui-input-block">
+						<input type="text" class="layui-input" />
+					</div>
+				</div>
+
+				<div class="layui-form-item" >
+					<label class="layui-form-label">请选择:</label>
+					<div class="layui-input-inline" >
+						<select lay-filter="selectMovie">
+							<option value="">请选择</option>
+							<optgroup label="最新电影">
+								<option value="13">反恐精英</option>
+								<option value="14">海洋记录片</option>
+							</optgroup>
+							<optgroup label="最老电影">
+								<option value="12">智多星</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="layui-input-inline">
+						<select>
+							<option value="010">北京</option>
+							<option value="021">上海（禁用效果）</option>
+							<option value="0571">杭州</option>
+						</select>
+					</div>
+				</div>
+			</form><!--form_end-->
+		</div><!--main_end-->
+	</body>
+	<script>
+		//配置一波,加载自定义的模块
+		//在使用模块之前，全局化配置一些参数，尽管大部分时候它不是必须的
+		layui.config({
+			base:'/view/js/modules/'
+		});
+		//使用加载到页面的模块
+		layui.use(['form'],function(){
+		    var form=layui.form;
+		    //form.render();
+
+		    //触发监听select
+            form.on('select(selectMovie)', function(data){
+                console.log(data.elem); //得到select原始DOM对象
+                console.log(data.value); //得到被选中的值
+                console.log(data.othis); //得到美化后的DOM对象
+            });
+        });
+
+	</script>
+</html>

@@ -19,4 +19,11 @@ public class Front {
         return "f";
     }
 
+    @RequestMapping("/layForm")
+    public String layForm(){
+        System.out.println("layui form表单历程");
+        return "layStu/form";
+    }
+
+
 }
