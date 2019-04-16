@@ -1,0 +1,44 @@
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  thymeleaf:
+    prefix: /templates/view/
+    suffix: ,html
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+  datasource:
+    url: jdbc:mysql://localhost:3307/csaplat?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+        # 初始化大小，最小，最大
+        initial-size: 5
+        min-idle: 5
+        max-active: 20
+        # 配置获取连接等待超时的时间 ms
+        max-wait: 5000
+        # 是否缓存preparedStatement
+        pool-prepared-statements: true
+        max-pool-prepared-statement-per-connection-size: 20
+        # 校验SQL
+        validation-query: SELECT 'x'
+        validation-query-timeout: 20000
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        time-between-eviction-runs-millis: 60000
+        # 配置一个连接在池中最小生存的时间，单位是毫秒
+        min-evictable-idle-time-millis: 300000
+
+#-----------mybatis config--------------------
+mybatis:
+   type-aliases-package: springboot.example.domain
+   mapper-locations: "classpath*:mybatis/mapper/**.xml"
